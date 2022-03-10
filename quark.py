@@ -70,7 +70,7 @@ class Quark(dotbot.Plugin):
         # sc_script = os.path.expanduser("installquarks.scd")
         cmd = '[ -f {} ] && sclang {} {}'.format(sc_script, sc_script, pkg)
 
-        self._log.info("Installing SuperCollider Quark \"{}\". Please wait...".format(pkg))
+        self._log.info("Installing SuperCollider quark \"{}\". Please wait...".format(pkg))
 
         # needed to avoid conflicts due to locking
         # time.sleep(1)
@@ -86,7 +86,7 @@ class Quark(dotbot.Plugin):
         proc.stdout.close()
 
         if out == 0:
-            self._log.info("Successfully installed quark")
+            self._log.info("Successfully installed quark {}".format(pkg))
             return PkgStatus.INSTALLED
 
         self._log.error("An error occurred with quark {}".format(pkg))
