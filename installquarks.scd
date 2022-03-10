@@ -1,9 +1,14 @@
 var args = thisProcess.argv;
+var failed = false;
 args.do{|qName|
-    var thisquark;
     "Installing Quark: %".format(qName).postln;
-    thisquark = Quarks.install(qName);
-    if(thisquark.isInstalled.not, { "Failed to install %".format(qName).error; 1.exit})
+    {
+        Quarks.install(qName);
+    }.try({
+        "Failed to install %".format(qName).error;
+        failed = true;
+    });
+
 };
 
-0.exit;
+failed.asInteger.exit;
