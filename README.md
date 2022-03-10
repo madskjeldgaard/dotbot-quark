@@ -25,3 +25,7 @@ git submodule add https://github.com/madskjeldgaard/dotbot-quark.git
   - CC14
   - CuePlayer
 ```
+
+## Known problems
+
+This approach is very slow since it starts an sclang instance per quark to adhere more to dotbot conventions and to make it easier for dotbot to figure out which quark exactly failed/succeeded in installing.
