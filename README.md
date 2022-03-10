@@ -21,10 +21,10 @@ git submodule add https://github.com/madskjeldgaard/dotbot-quark.git
 
 ```yaml
 - quark:
-	- https://codeberg.org/madskjeldgaard/mk-libs
-	- atk-sc3
-	- CC14
-	- CuePlayer
+  - https://codeberg.org/madskjeldgaard/mk-libs
+  - atk-sc3
+  - CC14
+  - CuePlayer
 ```
 
 ## Known problems
